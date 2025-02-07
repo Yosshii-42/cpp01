@@ -1,11 +1,8 @@
-NAME	= BraiiiiiiinnnzzzZ
+NAME	= HI_THIS_IS_BRAIN
 CPP		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 # FLAGS	+= -fsanitize=thread -g
-SRCS	= main.cpp \
-		  Zombie.cpp \
-		  newZombie.cpp \
-		  randomChump.cpp
+SRCS	= main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 %.o: %.cpp
