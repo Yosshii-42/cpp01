@@ -2,18 +2,26 @@
 #include "HumanB.hpp"
 
 int main() {
-    Weapon  snow("snow balls");
-    HumanA  hana("hana   ", snow);
+    Weapon  weapon("snow balls");
+
+    HumanA* ptr = NULL;
+    HumanB* yosshii = new HumanB("Yosshii", ptr);
+
+    yosshii->setWeapon(weapon);
+    yosshii->attack();
+
+    HumanA  hana("Hana   ", weapon);
 
     hana.attack();
-
-    HumanB  yosshii("yosshii");
-    yosshii.attack();
-    yosshii.setWeapon(snow);
-    yosshii.attack();
-
-    snow.setType("pie");
+    ptr = &hana;
+    yosshii->setHumanA(&hana);
+    yosshii->setWeapon(weapon);
+    yosshii->attack();
+    weapon.setType("pies");
+    hana.setWeapon(weapon);
+    yosshii->setWeapon(weapon);
     hana.attack();
-    yosshii.attack();
+    yosshii->attack();
+    delete yosshii;
     return (0);
 }
