@@ -1,6 +1,6 @@
 NAME	= Unnecessary_violence
 CPP		= c++
-# FLAGS	= -Wall -Wextra -Werror -std=c++98
+FLAGS	= -Wall -Wextra -Werror -std=c++98
 FLAGS	+= -fsanitize=thread -g
 SRCS	= main.cpp \
 		  Weapon.cpp \
