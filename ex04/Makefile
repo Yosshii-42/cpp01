@@ -2,7 +2,8 @@ NAME	= Sed_is_for_losers
 CPP		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 # FLAGS	+= -fsanitize=thread -g
-SRCS	= main.cpp
+SRCS	= main.cpp \
+		  Replace.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 %.o: %.cpp

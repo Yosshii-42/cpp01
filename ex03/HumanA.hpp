@@ -13,7 +13,6 @@ class HumanA {
         ~HumanA();
         void    setWeapon( void ) const;
         void    attack() const;
-        // std::string getName() const; 
 } ;
 
 #endif

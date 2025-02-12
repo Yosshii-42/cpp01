@@ -13,9 +13,9 @@ Weapon::Weapon( std::string newType)
 Weapon::~Weapon() {
     std::cout << "Villagers put away";
     if (this->_oldtype != "")
-        std::cout << "weapons" << std::endl;
+        std::cout << " weapons" << std::endl;
     else
-        std::cout << "the weapon" << std::endl;
+        std::cout << " the weapon" << std::endl;
 }
 
 const std::string   Weapon::getType( void ) const {

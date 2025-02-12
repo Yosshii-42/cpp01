@@ -30,7 +30,3 @@ void    HumanA::attack() const {
               << this->_weapon.getType() 
               << std::endl;
 }
-
-// std::string HumanA::getName() const {
-//     return (this->_name);
-// }
