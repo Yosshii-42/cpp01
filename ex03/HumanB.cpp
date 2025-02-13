@@ -32,7 +32,7 @@ void    HumanB::attack() const {
     }
 }
 
-void    HumanB::setWeapon( Weapon& newWeapon ) {
+void    HumanB::getWeapon( Weapon& newWeapon ) {
     this->_weapon = &newWeapon;
     if (this->_humanA == NULL) {
         std::cout << this->_name

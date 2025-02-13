@@ -15,7 +15,7 @@ HumanA::~HumanA() {
               << std::endl;
 }
 
-void    HumanA::setWeapon() const {
+void    HumanA::getWeapon() const {
     std::cout << this->_name
               << " return the "
               << this->_weapon.getOldType()

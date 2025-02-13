@@ -6,18 +6,18 @@ int main() {
     HumanA *hanap = NULL;
 
     HumanB*  yosshii = new HumanB("yosshii", hanap);
-    yosshii->setWeapon(weapon);
+    yosshii->getWeapon(weapon);
     yosshii->attack();
     HumanA  hana("hana   ", weapon);
     hanap = &hana;
 
     hana.attack();
     yosshii->setHumanA(&hana);
-    yosshii->setWeapon(weapon);
+    yosshii->getWeapon(weapon);
     yosshii->attack();
     weapon.setType("pies");
-    hana.setWeapon();
-    yosshii->setWeapon(weapon);
+    hana.getWeapon();
+    yosshii->getWeapon(weapon);
     hana.attack();
     yosshii->attack();
     delete yosshii;
