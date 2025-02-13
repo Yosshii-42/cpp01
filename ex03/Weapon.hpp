@@ -6,7 +6,7 @@
 class Weapon {
     private:
         std::string  _type;
-        std::string  _oldtype;
+        std::string  _oldType;
     public:
         Weapon();
         Weapon( std::string newType);
