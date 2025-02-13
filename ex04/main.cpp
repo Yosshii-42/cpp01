@@ -1,8 +1,9 @@
 #include "Replace.hpp"
 
+
 bool    checkArgs(int argc, char **argv) {
-    if (argc != 4 || !argv[2][0]) {
-        std::cerr << "argument error" << std::endl;
+    if (argc != 4 || !(*argv[1])) {
+        std::cout << "argument error" << std::endl;
         return (false);
     }
     return (true);
