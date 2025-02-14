@@ -7,13 +7,7 @@
 
 class Harl {
 private:
-    enum level {
-        DEBUG = 1,
-        INFO,
-        WARNING,
-        ERROR
-    };
-    std::map<std::string, int> _levelMap;
+    std::map<std::string, void (Harl::*)()> _levelMap;
     void    _debug();
     void    _info();
     void    _warning();
