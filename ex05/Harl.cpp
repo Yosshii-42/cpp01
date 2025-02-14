@@ -46,10 +46,6 @@ Harl::~Harl() {}
 
 void    Harl::complain( const std::string& level ) {
     std::map<std::string, void (Harl::*)()>::iterator it = _levelMap.find(level);
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
     if (it == _levelMap.end()) {
         _argError();
         return ;
