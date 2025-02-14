@@ -1,4 +1,4 @@
-NAME	= Harl_2_0
+NAME	= Harl
 CPP		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 # FLAGS	+= -fsanitize=thread -g

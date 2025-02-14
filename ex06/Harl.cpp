@@ -36,21 +36,45 @@ void    Harl::_argError() {
 }
 
 Harl::Harl() {
+<<<<<<< Updated upstream
     _levelMap["DEBUG"] = &Harl::_debug;
     _levelMap["INFO"] = &Harl::_info;
     _levelMap["WARNING"] = &Harl::_warning;
     _levelMap["ERROR"] = &Harl::_error;
+=======
+    _levelMap["DEBUG"] = 1;
+    _levelMap["INFO"] = 2;
+    _levelMap["WARNING"] = 3;
+    _levelMap["ERROR"] = 4;
+>>>>>>> Stashed changes
 }
 Harl::~Harl() {}
 
 void    Harl::complain( const std::string& level ) {
+<<<<<<< Updated upstream
     std::map<std::string, void (Harl::*)()>::iterator it = _levelMap.find(level);
+=======
+    std::map<std::string, int>::iterator it = _levelMap.find(level);
+>>>>>>> Stashed changes
     if (it == _levelMap.end()) {
         _argError();
         return ;
     }
+<<<<<<< Updated upstream
     for (; it != _levelMap.end(); ++it) {
         (this->*it->second)();       
+=======
+    switch (it->second) {
+        case 1:
+            _debug();
+        case 2:
+            _info();
+        case 3:
+            _warning();
+        case 4:
+            _error();
+            break;
+>>>>>>> Stashed changes
     }
 }
 

@@ -1,9 +1,10 @@
 #include "Zombie.hpp"
 
 int main( void) {
-    Zombie* ptr = zombieHorde(10, "heapZombie");
+    int N = 10;
+    Zombie* ptr = zombieHorde(N, "heapZombie");
 
-    for (int i(0); i < 10; ++i)
+    for (int i(0); i < N; ++i)
         ptr[i].announce();
     delete[] ptr;
 

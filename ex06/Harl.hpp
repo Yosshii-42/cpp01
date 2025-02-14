@@ -7,7 +7,11 @@
 
 class Harl {
 private:
+<<<<<<< Updated upstream
     std::map<std::string, void (Harl::*)()> _levelMap;
+=======
+    std::map<std::string, int> _levelMap;
+>>>>>>> Stashed changes
     void    _debug();
     void    _info();
     void    _warning();

@@ -6,25 +6,6 @@ Replace::Replace( std::string filename, std::string s1, std::string s2 )
 
 Replace::~Replace() {}
 
-void Replace::replaceBuffer( std::string buffer, std::ofstream& newFileFd ) {
-    size_t          pos;
-    size_t          found;
-    std::string     newBuffer;
-
-    pos = 0;
-    while (pos < buffer.length()) {
-        found = buffer.find(this->_s1, pos);
-        if (found == std::string::npos) {
-            newBuffer += buffer.substr(pos);
-            break ;
-        }
-        newBuffer += buffer.substr(pos, found - pos);
-        newBuffer += this->_s2;
-        pos = found + this->_s1.length();
-    }
-    newFileFd << newBuffer;
-}
-
 bool    Replace::replacer() {
     std::string     newFile = this->_filename + ".replace";
     std::string     buffer;
@@ -44,4 +25,23 @@ bool    Replace::replacer() {
     fileFd.close();
     newFileFd.close();
     return (true);
+}
+
+void Replace::replaceBuffer( std::string buffer, std::ofstream& newFileFd ) {
+    size_t          pos;
+    size_t          found;
+    std::string     newBuffer;
+
+    pos = 0;
+    while (pos < buffer.length()) {
+        found = buffer.find(this->_s1, pos);
+        if (found == std::string::npos) {
+            newBuffer += buffer.substr(pos);
+            break ;
+        }
+        newBuffer += buffer.substr(pos, found - pos);
+        newBuffer += this->_s2;
+        pos = found + this->_s1.length();
+    }
+    newFileFd << newBuffer;
 }
