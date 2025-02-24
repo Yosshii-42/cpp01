@@ -35,21 +35,20 @@ void    Harl::_argError() {
               << std::endl;
 }
 
-Harl::Harl() {
-    _levelMap["DEBUG"] = &Harl::_debug;
-    _levelMap["INFO"] = &Harl::_info;
-    _levelMap["WARNING"] = &Harl::_warning;
-    _levelMap["ERROR"] = &Harl::_error;
-}
+Harl::Harl() {}
 
 Harl::~Harl() {}
 
 void    Harl::complain( const std::string& level ) {
-    std::map<std::string, void (Harl::*)()>::iterator it = _levelMap.find(level);
-    if (it == _levelMap.end()) {
-        _argError();
-        return ;
+    std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+    void    (Harl::*func[])() = {
+        &Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error
+    };
+
+    for (int i(0); i < 4; ++i) {
+        if (levels[i] == level)
+            (this->*func[i])();
     }
-    (this->*it->second)();
+    this->_argError();
 }
 

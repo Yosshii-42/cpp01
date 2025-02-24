@@ -7,7 +7,6 @@
 
 class Harl {
 private:
-    std::map<std::string, void (Harl::*)()> _levelMap;
     void    _debug();
     void    _info();
     void    _warning();
